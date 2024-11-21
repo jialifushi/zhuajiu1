@@ -11,7 +11,7 @@ document.getElementById("start").addEventListener("click", function () {
 
 // 使用配置文件抓阄
 document.getElementById("start-config").addEventListener("click", function () {
-  fetch("config.json")
+  fetch("/config.json")
     .then(response => {
       if (!response.ok) {
         throw new Error("加载配置文件失败！");

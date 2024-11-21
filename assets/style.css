@@ -41,3 +41,13 @@ button:hover {
   font-weight: bold;
   color: #333;
 }
+
+#history {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+#history p {
+  margin: 5px 0;
+}

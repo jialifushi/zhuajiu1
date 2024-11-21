@@ -3,7 +3,7 @@ document.getElementById("start").addEventListener("click", function () {
   const input = document.getElementById("input").value.trim();
   const candidates = input.split("\n").filter(item => item.trim() !== "");
   if (candidates.length === 0) {
-    alert("请输入候选项！");
+    alert("请先输入抓阄的内容哦！");
     return;
   }
   pickRandom(candidates);
@@ -21,7 +21,7 @@ document.getElementById("start-config").addEventListener("click", function () {
     .then(data => {
       const candidates = data.candidates || [];
       if (candidates.length === 0) {
-        alert("配置文件中没有可用的候选项！");
+        alert("配置文件中没有可用的抓阄内容！");
         return;
       }
       pickRandom(candidates);
@@ -39,7 +39,7 @@ function pickRandom(candidates) {
   const resultDiv = document.getElementById("result");
 
   // 显示结果并添加动画
-  resultDiv.innerHTML = `<p>🎉 恭喜：<strong>${winner}</strong></p>`;
+  resultDiv.innerHTML = `<p>🎉 恭喜你：<strong>${winner}</strong></p>`;
   resultDiv.classList.add("shake");
 
   // 移除动画效果以便重新触发
